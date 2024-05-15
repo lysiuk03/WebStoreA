@@ -63,13 +63,15 @@ namespace WebStore.Data
                     var kovbasy = new CategoryEntity
                     {
                         Name = "Ковбаси",
-                        Description = "Хороші і довго ковбаси"
+                        Description = "Хороші і довго ковбаси",
+                        Image = "kovbasa.jpg"
                     };
                     var vsutiy = new CategoryEntity
                     {
                         Name = "Взуття",
                         Description = "Гарне взуття із гарнатуєю 5 років." +
-                        "Можна нирять під воду."
+                        "Можна нирять під воду.",
+                        Image = "shoes.jpg"
                     };
                     context.Categories.Add(kovbasy);
                     context.Categories.Add(vsutiy);

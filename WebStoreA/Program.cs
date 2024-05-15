@@ -7,6 +7,7 @@ using WebStoreA.Data.Entities.Identity;
 using WebStoreA.Interfaces;
 using WebStoreA.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
