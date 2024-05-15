@@ -85,3 +85,4 @@ C:\Users\Admin\source\repos\WebStoreA\WebStoreA\bin\Debug\net7.0\System.Identity
 C:\Users\Admin\source\repos\WebStoreA\WebStoreA\bin\Debug\net7.0\images\kovbasa.jpg
 C:\Users\Admin\source\repos\WebStoreA\WebStoreA\bin\Debug\net7.0\images\shoes.jpg
 C:\Users\Admin\source\repos\WebStoreA\WebStoreA\bin\Debug\net7.0\SixLabors.ImageSharp.dll
+C:\Users\Admin\source\repos\WebStoreA\WebStoreA\bin\Debug\net7.0\images\3gnyg0gr.ruw.webp
