@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using WebStoreA.Data.Entities;
 using WebStoreA.Data.Entities.Identity;
 
-namespace WebStore.Data
+namespace WebStoreA.Data
 {
     public class MyAppContext : IdentityDbContext<UserEntity, RoleEntity, long,
          IdentityUserClaim<long>, UserRoleEntity, IdentityUserLogin<long>,

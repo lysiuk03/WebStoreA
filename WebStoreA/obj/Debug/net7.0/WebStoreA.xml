@@ -40,13 +40,25 @@
         <member name="M:WebStoreA.Migrations.AddPhotpCategory.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
-        <member name="P:WebStore.Models.Account.LoginViewModel.Email">
+        <member name="T:WebStoreA.Migrations.Add_UserId_in_tblCategories">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.Add_UserId_in_tblCategories.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.Add_UserId_in_tblCategories.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.Add_UserId_in_tblCategories.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:WebStoreA.Models.Account.LoginViewModel.Email">
             <summary>
             Пошта користувача
             </summary>
             <example>admin@gmail.com</example>
         </member>
-        <member name="P:WebStore.Models.Account.LoginViewModel.Password">
+        <member name="P:WebStoreA.Models.Account.LoginViewModel.Password">
             <summary>
             Пароль користувача
             </summary>

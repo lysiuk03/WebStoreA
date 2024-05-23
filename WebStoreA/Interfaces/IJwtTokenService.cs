@@ -1,4 +1,6 @@
-﻿using WebStoreA.Data.Entities.Identity;
+﻿
+
+using WebStoreA.Data.Entities.Identity;
 
 namespace WebStoreA.Interfaces
 {

@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebStore.Data;
+using WebStoreA.Data;
 
 #nullable disable
 
@@ -126,7 +126,13 @@ namespace WebStoreA.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("TEXT");
 
+                    b.Property<long?>("UserId")
+                        .IsRequired()
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("tblCategories");
                 });
@@ -289,6 +295,17 @@ namespace WebStoreA.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("WebStoreA.Data.Entities.CategoryEntity", b =>
+                {
+                    b.HasOne("WebStoreA.Data.Entities.Identity.UserEntity", "User")
+                        .WithMany("Categories")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("WebStoreA.Data.Entities.Identity.UserRoleEntity", b =>
                 {
                     b.HasOne("WebStoreA.Data.Entities.Identity.RoleEntity", "Role")
@@ -315,6 +332,8 @@ namespace WebStoreA.Migrations
 
             modelBuilder.Entity("WebStoreA.Data.Entities.Identity.UserEntity", b =>
                 {
+                    b.Navigation("Categories");
+
                     b.Navigation("UserRoles");
                 });
 #pragma warning restore 612, 618

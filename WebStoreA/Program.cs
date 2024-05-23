@@ -6,7 +6,6 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.Text;
-using WebStore.Data;
 using WebStoreA.Data;
 using WebStoreA.Data.Entities.Identity;
 using WebStoreA.Interfaces;

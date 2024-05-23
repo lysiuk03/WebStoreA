@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using WebStoreA.Constants;
+using System;
 using WebStoreA.Data.Entities.Identity;
+using WebStoreA.Constants;
 using WebStoreA.Data.Entities;
 
-namespace WebStore.Data
+namespace WebStoreA.Data
 {
     public static class SeederDB
     {
@@ -35,6 +36,7 @@ namespace WebStore.Data
                     }
                 }
 
+                var userId = 0L;
                 if (!context.Users.Any())
                 {
                     UserEntity user = new()
@@ -43,12 +45,13 @@ namespace WebStore.Data
                         LastName = "Капот",
                         Email = "admin@gmail.com",
                         UserName = "admin@gmail.com",
-                        Image = "default_image.jpg",
                     };
                     var result = userManager.CreateAsync(user, "123456")
                         .Result;
+
                     if (result.Succeeded)
                     {
+                        userId = user.Id;
                         result = userManager
                             .AddToRoleAsync(user, Roles.Admin)
                             .Result;
@@ -64,14 +67,16 @@ namespace WebStore.Data
                     {
                         Name = "Ковбаси",
                         Description = "Хороші і довго ковбаси",
-                        Image = "kovbasa.jpg"
+                        Image = "kovbasa.jpg",
+                        UserId = userId,
                     };
                     var vsutiy = new CategoryEntity
                     {
                         Name = "Взуття",
                         Description = "Гарне взуття із гарнатуєю 5 років." +
                         "Можна нирять під воду.",
-                        Image = "shoes.jpg"
+                        Image = "shoes.jpg",
+                        UserId = userId,
                     };
                     context.Categories.Add(kovbasy);
                     context.Categories.Add(vsutiy);

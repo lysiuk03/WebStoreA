@@ -1,4 +1,4 @@
-﻿namespace WebStore.Models.Account
+﻿namespace WebStoreA.Models.Account
 {
     public class LoginViewModel
     {
