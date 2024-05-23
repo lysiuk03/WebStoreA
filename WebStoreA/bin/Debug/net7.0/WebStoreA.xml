@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebStoreA</name>
+    </assembly>
+    <members>
+        <member name="T:WebStoreA.Migrations.Add_tbl_Categories">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.Add_tbl_Categories.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.Add_tbl_Categories.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.Add_tbl_Categories.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebStoreA.Migrations.AddIdentityTables">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.AddIdentityTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.AddIdentityTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.AddIdentityTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebStoreA.Migrations.AddPhotpCategory">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.AddPhotpCategory.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.AddPhotpCategory.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebStoreA.Migrations.AddPhotpCategory.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:WebStore.Models.Account.LoginViewModel.Email">
+            <summary>
+            Пошта користувача
+            </summary>
+            <example>admin@gmail.com</example>
+        </member>
+        <member name="P:WebStore.Models.Account.LoginViewModel.Password">
+            <summary>
+            Пароль користувача
+            </summary>
+            <example>123456</example>
+        </member>
+    </members>
+</doc>

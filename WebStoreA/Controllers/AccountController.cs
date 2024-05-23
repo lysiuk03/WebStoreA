@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using WebStore.Models.Account;
 using WebStoreA.Constants;
 using WebStoreA.Data.Entities.Identity;
 using WebStoreA.Interfaces;

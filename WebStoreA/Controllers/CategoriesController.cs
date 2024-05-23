@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Webp;
 using SixLabors.ImageSharp.Processing;
@@ -10,6 +11,7 @@ namespace WebStore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoriesController : ControllerBase
     {
         private readonly MyAppContext _appContext;
@@ -22,6 +24,7 @@ namespace WebStore.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            var email = User.Claims.FirstOrDefault().Value;
             var list = _appContext.Categories.ToList();
             return Ok(list);
         }
@@ -72,7 +75,7 @@ namespace WebStore.Controllers
             }
             if (model.Image != null)
             {
-                string imgDel = category.Image;
+                string? imgDel = category.Image;
                 if (imgDel != null)
                 {
                     string imgDelPath = Path.Combine(Directory.GetCurrentDirectory(), "images", imgDel);
@@ -80,7 +83,6 @@ namespace WebStore.Controllers
                     {
                         System.IO.File.Delete(imgDelPath);
                     }
-
                 }
                 using Image image = Image.Load(model.Image.OpenReadStream());
                 image.Mutate(x =>
