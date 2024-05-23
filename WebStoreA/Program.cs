@@ -20,6 +20,8 @@ builder.Services.AddDbContext<MyAppContext>(opt =>
 
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 var singinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetValue<String>("JwtSecretKey")));
 
 builder.Services.AddAuthentication(options =>

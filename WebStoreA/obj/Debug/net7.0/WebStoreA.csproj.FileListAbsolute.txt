@@ -88,3 +88,4 @@ C:\Users\Admin\source\repos\WebStoreA\WebStoreA\bin\Debug\net7.0\SixLabors.Image
 C:\Users\Admin\source\repos\WebStoreA\WebStoreA\bin\Debug\net7.0\images\lkrbs5x3.h34.webp
 C:\Users\Admin\source\repos\WebStoreA\WebStoreA\bin\Debug\net7.0\WebStoreA.xml
 C:\Users\Admin\source\repos\WebStoreA\WebStoreA\obj\Debug\net7.0\WebStoreA.xml
+C:\Users\Admin\source\repos\WebStoreA\WebStoreA\bin\Debug\net7.0\AutoMapper.dll

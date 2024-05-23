@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "c5OitMiIcng+fKF/BDZ1GZ/kk8KMqqY27ohPKiMG1uvpn1WbmRDwjqKEDSpsaNanuuJHrdvK33Ml+gNbGqMpvg==",
+  "dgSpecHash": "QAdRi7o5/2eYnQlasvAIf5MO21BOfjIpKFn8mxZHu1KfUdNx+q+XLX+8uAYT141CVQPkyJmTr4BXmZ4GXWnYAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\WebStoreA\\WebStoreA\\WebStoreA.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.18\\microsoft.aspnetcore.authentication.jwtbearer.7.0.18.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.18\\microsoft.aspnetcore.cryptography.internal.7.0.18.nupkg.sha512",

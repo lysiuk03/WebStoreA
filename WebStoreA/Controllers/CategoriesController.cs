@@ -1,13 +1,15 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Webp;
 using SixLabors.ImageSharp.Processing;
-using WebStoreA.Data;
 using WebStoreA.Data.Entities.Identity;
 using WebStoreA.Data.Entities;
+using WebStoreA.Data;
 using WebStoreA.Models.Categories;
+using AutoMapper;
 
 namespace WebStoreA.Controllers
 {
@@ -18,11 +20,14 @@ namespace WebStoreA.Controllers
     {
         private readonly MyAppContext _appContext;
         private readonly UserManager<UserEntity> _userManager;
+        private readonly IMapper _mapper;
 
-        public CategoriesController(MyAppContext appContext, UserManager<UserEntity> userManager)
+        public CategoriesController(MyAppContext appContext, UserManager<UserEntity> userManager,
+            IMapper mapper)
         {
             _appContext = appContext;
             _userManager = userManager;
+            _mapper = mapper;
         }
 
         private async Task<UserEntity> GetUserAuthAsync()
@@ -38,6 +43,7 @@ namespace WebStoreA.Controllers
             var user = await GetUserAuthAsync();
             var list = _appContext.Categories
                 .Where(x => x.UserId == user.Id)
+                .Select(x => _mapper.Map<CategoryItemViewModel>(x))
                 .ToList();
             return Ok(list);
         }
@@ -55,7 +61,7 @@ namespace WebStoreA.Controllers
                 return NotFound();
             }
 
-            return Ok(category);
+            return Ok(_mapper.Map<CategoryItemViewModel>(category));
         }
 
         [HttpPost]
@@ -94,7 +100,7 @@ namespace WebStoreA.Controllers
 
             _appContext.Categories.Add(category);
             _appContext.SaveChanges();
-            return Ok(category);
+            return Ok(_mapper.Map<CategoryItemViewModel>(category));
         }
 
         [HttpPut]
@@ -137,7 +143,7 @@ namespace WebStoreA.Controllers
             category.Description = model.Description;
             category.Name = model.Name;
             _appContext.SaveChanges();
-            return Ok(category);
+            return Ok(_mapper.Map<CategoryItemViewModel>(category));
         }
 
         [HttpDelete("{id}")]
